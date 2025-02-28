@@ -16,7 +16,7 @@ df=df.fillna("")
 df['Question']=df['Question'].str.lower()
 df['Answer']=df['Answer'].str.lower()
 vectorizer=TfidfVectorizer()
-question_vectorizer.fit_transform(df['Question'])
+question_vectors=vectorizer.fit_transform(df['Question'])
 API_KEY="AIzaSyBOeQUL549Fy6_lcvlDkG_TTsHyHKwTdlE"
 genai.configure(api_key=API_KEY)
 model=genai.GenerativeModel('gemini-1.5-flash')
