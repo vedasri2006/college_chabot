@@ -50,5 +50,5 @@ if prompt := st.chat_input("Say something..."):
         st.session_state.messages.append({"role":"assistant","content":response.text})
         with st.chat_meassage("assistant"):
             st.markdown(response.text)
-        except Exception as e:
-          st.error(f"Sorry,I couldn't generate a response. Error: {e}")
+      except Exception as e:
+        st.error(f"Sorry,I couldn't generate a response. Error: {e}")
